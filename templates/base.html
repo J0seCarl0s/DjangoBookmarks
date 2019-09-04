@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load bootstrap3 %}
+{% bootstrap_css %}
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="{% static }">
+		<title>
+			My Tweeter
+		</title>
+	</head>
+	<body>
+		{% block content %}
+		<h2 class="text-info">HELLO {{name}}!!</h2>
+		{% endblock %}
+		
+		{% bootstrap_javascript %}
+	</body>
+</html>
