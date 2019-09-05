@@ -21,11 +21,13 @@ urlpatterns = [
 ]
 """
 from tweets.views import Index
+from user_profile.views import Profile
 from django.conf.urls import url
 from django.contrib import admin
 
 admin.autodiscover()
 urlpatterns = [ 
 			url(r'^$', Index.as_view()),
-			url(r'^admin/', admin.site.urls)
+			url(r'^admin/', admin.site.urls),
+            url(r'^user/(\w+)/$', Profile.as_view())
 			]
